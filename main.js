@@ -3,28 +3,27 @@
 
 
 
-var buffaloBills = rawData.results;
+var buffaloBillsListings = rawData.results;
 
   $(document).ready(function(){
 
-  var $list = $('.items-list');
-  buffaloBills.forEach(function(title){
-    var titleText = renderTemplate('title-item', {
-      name: title.name
+    var $list = $('.items-list');
+    buffaloBillsListings.forEach(function(billsListing){
+      var titleText = renderTemplate('billsListing', {
+        name: "The Name"
       });
-    $list.append(titleText);
+      $list.append(titleText);
+    });
+
   });
 
-
-
-
-  //
-  // buffaloBills.forEach(function(item){
-  //   console.log(item.title);
-  // });
-  // buffaloBills.forEach(function(item){
-  //   console.log(item.Images);
-  // });
+  function renderTemplate(name, data) {
+    var $template = $('[data-template-name=' + name + ']').text();
+    $.each(data, function(prop, value) {
+      $template = $template.replace('<% ' + prop + ' %>', value);
+    });
+    return $template;
+  }
 
 
 
@@ -32,4 +31,4 @@ var buffaloBills = rawData.results;
 
 
 
-});();
+})();
