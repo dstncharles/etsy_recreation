@@ -6,7 +6,11 @@
 </head>
 <body>
   <ul class="items-list"></ul>
-  <script type="text/template" data-template-name="billsListing">   <li> <% name %> <li>
+  <script type="text/template" data-template-name="billsListing">                                              <ul class="items-list"></ul>
+    <img src="<% images %>" alt="">
+    <li> <% title %> </li>
+    <li> <% price %> </li>
+    <li> <% shop %> </li>
   </script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="data.js"></script>
