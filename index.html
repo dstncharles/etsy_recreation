@@ -6,16 +6,17 @@
 </head>
 
 <body>
+<div> <h1>Etsy</h1>
 <select name="sort" id="">
   <option value="low-price">Lowest Price</option>
   <option value="high-price">High Price</option>
   <option value="relevency">Relevency</option>
 </select>
+</div>
 
   <ul class="items-list"></ul>
   <script type="text/template" data-template-name="billsListing">                                              <ul class="items-list"></ul>
-    <a href="pictureLinks"><img src="<% images %>" alt=""></a>
-
+    <a href="<% pictureLink %>"><img src="<% images %>" alt=""></a>
     <li> <% title %> </li>
     <li> <% price %> </li>
     <li> <% shop %> </li>

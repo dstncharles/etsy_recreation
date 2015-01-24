@@ -12,15 +12,13 @@ var buffaloBillsListings = rawData.results;
         title: billsListing.title,
         price: billsListing.price,
         images: billsListing.Images[0].url_170x135,
+        pictureLink: billsListing.url,
         shop: billsListing.Shop.shop_name
       });
       $list.append(titleText);
     });
 
   });
-
-var pictureLinks = buffaloBillsListings.url;
-
 
 
   function renderTemplate(name, data) {
@@ -38,10 +36,6 @@ var pictureLinks = buffaloBillsListings.url;
   };
 
     console.log(sortByPrice(buffaloBillsListings));
-
-
-
-
 
 
 
