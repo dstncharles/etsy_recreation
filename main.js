@@ -1,8 +1,6 @@
 (function(){
   'use strict';
 
-
-
 var buffaloBillsListings = rawData.results;
 
   $(document).ready(function(){
@@ -21,6 +19,7 @@ var buffaloBillsListings = rawData.results;
 
   });
 
+var pictureLinks = buffaloBillsListings.url;
 
 
 
@@ -31,6 +30,15 @@ var buffaloBillsListings = rawData.results;
     });
     return $template;
   }
+
+
+
+  var sortByPrice = function(array) {
+    return _.sortBy(array, "price").reverse();
+  };
+
+    console.log(sortByPrice(buffaloBillsListings));
+
 
 
 
