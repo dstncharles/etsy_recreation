@@ -27,7 +27,46 @@ body:before {
   width: 100%;
   z-index: -1; }
 
+body {
+  font-family: "Arial","Helvetica",sans-serif;
+  font-size: 12px; }
+
 header {
-  color: #D15600; }
+  color: #d15600; }
+
+.basediv {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .basediv::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+a {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  a:last-child {
+    margin-right: 0; }
+  a:nth-child(3n) {
+    margin-right: 0; }
+  a:nth-child(3n+1) {
+    clear: left; }
+
+li {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  list-style-type: none; }
+
+img {
+  padding: 5px;
+  width: 214px;
+  height: 170px; }
 
 /*# sourceMappingURL=main.css.map */

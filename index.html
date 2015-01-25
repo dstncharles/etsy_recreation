@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Etsy Bills</title>
@@ -7,26 +8,31 @@
 </head>
 
 <body>
-<div>
-  <header>Etsy</header>
-<select name="sort" id="">
-  <option value="low-price">Lowest Price</option>
-  <option value="high-price">High Price</option>
-  <option value="relevency">Relevency</option>
-</select>
+  <div>
+    <header>Etsy</header>
+    <select name="sort" id="">
+      <option value="low-price">Lowest Price</option>
+      <option value="high-price">High Price</option>
+      <option value="relevency">Relevency</option>
+    </select>
 
-</div>
+  </div>
+  <div class="basediv">
+    <ul class="items-list"></ul>
+    <script type="text/template" data-template-name="billsListing">
+      <a href="<% pictureLink %>"><img src="<% images %>" alt="">
+<ul class="items-list"></ul>
+  <li> <% title %> </li>
+  <li> <% price %> </li>
+  <li> <% shop %> </li>
+</a>
+    </script>
+  </div>
 
-  <ul class="items-list"></ul>
-  <script type="text/template" data-template-name="billsListing">                                              <ul class="items-list"></ul>
-    <a href="<% pictureLink %>"><img src="<% images %>" alt=""></a>
-    <li> <% title %> </li>
-    <li> <% price %> </li>
-    <li> <% shop %> </li>
-  </script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script    src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
   <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
