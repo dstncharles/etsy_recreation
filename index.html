@@ -15,19 +15,18 @@
       <option value="high-price">High Price</option>
       <option value="relevency">Relevency</option>
     </select>
-  </div>
 
+  </div>
   <div class="basediv">
-    <!-- eff os -->
-    <div class="items-list">
-      <script type="text/template" data-template-name="billsListing">
-        <!-- img --><a href="<% pictureLink %>"><img src="<% images %>" alt="">
-      <!-- h2 -->  <div class="itemdiscript"> <% title %> </div>
-      <!--   <div> <% price %> </div> -->
-    <!-- p -->    <div class="usershop"> <% shop %> </div>
+    <ul class="items-list"></ul>
+    <script type="text/template" data-template-name="billsListing">
+      <a href="<% pictureLink %>"><img src="<% images %>" alt="">
+        <ul class="items-list"></ul>
+        <li> <% title %> </li>
+        <li> <% price %> </li>
+        <li> <% shop %> </li>
       </a>
-      </script>
-    </div>
+    </script>
   </div>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -35,27 +34,5 @@
   <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </body>
-
-
-<!-- <h2>Oscar</h2>
-<div class="grid">
-  <figure class="effect-oscar">
-    <img src="img/9.jpg" alt="img09"/>
-    <figcaption>
-      <h2>Warm <span>Oscar</span></h2>
-      <p>Oscar is a decent man. He used to clean porches with pleasure.</p>
-      <a href="#">View more</a>
-    </figcaption>
-  </figure>
-</div>
-
-
-
-
-
- -->
-
-
-
 
 </html>

@@ -1,13 +1,13 @@
-(function(){
+(function() {
   'use strict';
 
-var buffaloBillsListings = rawData.results;
+  var buffaloBillsListings = rawData.results;
 
-  $(document).ready(function(){
+  $(document).ready(function() {
 
     var $list = $('.items-list');
 
-    buffaloBillsListings.forEach(function(billsListing){
+    buffaloBillsListings.forEach(function(billsListing) {
       var titleText = renderTemplate('billsListing', {
         title: billsListing.title,
         price: billsListing.price,
@@ -35,7 +35,7 @@ var buffaloBillsListings = rawData.results;
     return _.sortBy(array, "price").reverse();
   };
 
-    console.log(sortByPrice(buffaloBillsListings));
+  console.log(sortByPrice(buffaloBillsListings));
 
 
 
