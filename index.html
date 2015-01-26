@@ -15,18 +15,19 @@
       <option value="high-price">High Price</option>
       <option value="relevency">Relevency</option>
     </select>
-
   </div>
+
   <div class="basediv">
-    <ul class="items-list"></ul>
-    <script type="text/template" data-template-name="billsListing">
-      <a href="<% pictureLink %>"><img src="<% images %>" alt="">
-<ul class="items-list"></ul>
-  <li> <% title %> </li>
-  <li> <% price %> </li>
-  <li> <% shop %> </li>
-</a>
-    </script>
+    <!-- eff os -->
+    <div class="items-list">
+      <script type="text/template" data-template-name="billsListing">
+        <!-- img --><a href="<% pictureLink %>"><img src="<% images %>" alt="">
+      <!-- h2 -->  <div class="itemdiscript"> <% title %> </div>
+      <!--   <div> <% price %> </div> -->
+    <!-- p -->    <div class="usershop"> <% shop %> </div>
+      </a>
+      </script>
+    </div>
   </div>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
