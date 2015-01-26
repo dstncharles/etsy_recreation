@@ -10,6 +10,10 @@
 <body>
   <div>
     <header>Etsy</header>
+    <form>
+      <input type="text" placeholder="Search...">
+      <input type="submit" value="Search">
+    </form>
     <select name="sort" id="">
       <option value="low-price">Lowest Price</option>
       <option value="high-price">High Price</option>
@@ -19,7 +23,7 @@
   </div>
   <div class="basediv">
     <ul class="items-list"></ul>
-    <script type="text/template" data-template-name="billsListing">
+    <script type="text/template" data-template-name="searchItems">
       <a href="<% pictureLink %>"><img src="<% images %>" alt="">
         <ul class="items-list"></ul>
         <li> <% title %> </li>
