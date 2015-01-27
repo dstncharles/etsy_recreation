@@ -35,15 +35,38 @@
 
   console.log(sortByPrice(searchBoxItems));
 
-  // 1.Load page with blank search box
-  //event listener///
-  $("form").on('submit', function(event) {
-    console.log($(this).find());
-  });
 
+
+
+
+
+  // 1.Load page with blank search box
+  var itemRequest = function() {}
+
+
+
+
+
+  //event listener//
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    console.log($(this).find('input').val());
+
+  });
 
   // 2.event listen for button (console.log something)
   // 3.add terms to url (console.log something)
+  $.ajax({
+    url: "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=" + itemRequest + "&includes=Images,Shop",
+    type: "GET",
+    dataType: 'jsonp'
+  }).done(function(data) {
+    console.log(data);
+  });
+
+
+
+
   // 4.store term in VAR
   // 5.ajax request (GET) (console.log data)
   // 6.empty container + read items
