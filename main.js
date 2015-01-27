@@ -2,10 +2,11 @@
   'use strict';
 
   var searchBoxItems = rawData.results;
+  var $list = $('.items-list');
 
   $(document).ready(function() {
 
-    var $list = $('.items-list');
+    // var $list = $('.items-list');
 
     searchBoxItems.forEach(function(searchItems) {
       var titleText = renderTemplate('searchItems', {
@@ -36,34 +37,35 @@
   console.log(sortByPrice(searchBoxItems));
 
 
-
-
+  // 
+  // function renderListing(data) {
+  //   renderTemplate(name, data);
+  // }
 
 
   // 1.Load page with blank search box
-  var itemRequest = function() {}
+  // var itemRequest = function() {}
 
 
 
-
+  // 2.event listen for button (console.log something)
+  // 3.add terms to url (console.log something)
 
   //event listener//
   $('form').on('submit', function(event) {
     event.preventDefault();
-    console.log($(this).find('input').val());
-
+    var itemRequest = ($(this).find('input').val());
+    $.ajax({
+        url: "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=" + itemRequest + "&includes=Images,Shop",
+        type: "GET",
+        dataType: 'jsonp'
+      })
+      .done(function(data) {
+        // $list.empty();
+        // renderListing(data.results);
+        console.log(data);
+      });
   });
-
-  // 2.event listen for button (console.log something)
-  // 3.add terms to url (console.log something)
-  $.ajax({
-    url: "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=" + itemRequest + "&includes=Images,Shop",
-    type: "GET",
-    dataType: 'jsonp'
-  }).done(function(data) {
-    console.log(data);
-  });
-
 
 
 
